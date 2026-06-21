@@ -1601,7 +1601,237 @@
         padding-left: 28px
       }
     }
-  </style>
+  
+/* ===== Enhanced Mobile & Tablet Responsiveness ===== */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 12px !important;
+    height: auto !important;
+    min-height: 60px;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    font-size: 1rem !important;
+  }
+
+  .nav-links {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .hero-name {
+    font-size: clamp(2.4rem, 12vw, 4rem) !important;
+    letter-spacing: -2px !important;
+  }
+
+  .hero-desc,
+  .about-txt p,
+  .contact-sub {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .stats-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .sbar-item {
+    border-right: none !important;
+    padding: 0 !important;
+  }
+
+  .edu-grid,
+  .pgrid,
+  .bento,
+  .about-grid,
+  .hero-wrap {
+    grid-template-columns: 1fr !important;
+  }
+
+  .award-card {
+    padding: 20px !important;
+  }
+
+  .sec-h,
+  .contact-h {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #hero {
+    padding: 90px 16px 40px !important;
+  }
+
+  .sw {
+    padding: 60px 16px !important;
+  }
+
+  .btn-g,
+  .btn-gl {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .stats-bar {
+    grid-template-columns: 1fr !important;
+  }
+
+  .edu-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tcard-inner,
+  .pc,
+  .bc,
+  .educard {
+    padding: 18px !important;
+  }
+
+  footer {
+    text-align: center;
+    justify-content: center !important;
+  }
+}
+
+
+/* ===== Project Section Overflow Fix ===== */
+.pgrid{
+  width:100%;
+}
+
+.pc{
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+}
+
+.pc-title,
+.pc-desc,
+.ptag{
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.pc-tags{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+@media (max-width:768px){
+  .pgrid{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  .pc{
+    padding:24px !important;
+    width:100% !important;
+  }
+
+  .pc-foot{
+    flex-wrap:wrap;
+    gap:12px;
+  }
+}
+
+@media (max-width:480px){
+  .pgrid{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+
+  .pc{
+    padding:18px !important;
+    margin:0 !important;
+  }
+
+  .pc-title{
+    font-size:1rem !important;
+    line-height:1.4 !important;
+  }
+
+  .pc-desc{
+    font-size:.9rem !important;
+    line-height:1.6 !important;
+  }
+
+  .pc-foot{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+  }
+
+  .ptag{
+    white-space:normal !important;
+  }
+}
+
+
+/* ===== FINAL PROJECT MOBILE FIX ===== */
+@media screen and (max-width: 900px){
+  .pgrid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px !important;
+  }
+
+  .pc{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+    grid-column:1 / -1 !important;
+  }
+
+  /* if projects are inside a horizontal wrapper/timeline */
+  .projects-wrapper,
+  .projects-grid,
+  .timeline,
+  .track{
+    display:block !important;
+    overflow:visible !important;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .pgrid{
+    grid-template-columns:1fr !important;
+  }
+
+  .pc{
+    padding:20px !important;
+    border-radius:20px !important;
+  }
+
+  .pc *{
+    max-width:100%;
+  }
+
+  .pc-tags{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+  }
+
+  .pc-foot{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:10px !important;
+  }
+}
+
+</style>
 </head>
 
 <body>
